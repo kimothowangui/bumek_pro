@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bumek Pro - Minimalist Construction Supplies Website
 
-## Getting Started
+A high-performance, minimalist web application for Bumek construction supplies, built with a modern static architecture.
 
-First, run the development server:
+## 🚀 Architecture
+This project has been refactored from Next.js to a high-performance minimalist stack:
+- **Frontend**: Pure HTML5, Vanilla JavaScript, and Tailwind CSS.
+- **Backend**: Supabase (Database, Auth, and Edge Functions).
+- **Styling**: Tailwind CSS (via CDN/Standalone).
+- **Components**: Dynamic component loading for shared UI (Navbar, Footer).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📂 Project Structure
+- `index.html`: Home page.
+- `products.html`: Dynamic product catalog.
+- `about.html`, `contact.html`, `quote.html`: Static information and interaction pages.
+- `admin.html`, `admin-quotes.html`: Password-protected administrative dashboards.
+- `js/`: Core application logic and component loading.
+- `components/`: Reusable HTML fragments.
+- `css/`: Global styles and Tailwind configuration.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Getting Started
+1. Clone the repository.
+2. Add your Supabase credentials to a `.env.local` file (see `.env.example`).
+3. Serve the directory using any local development server (e.g., Live Server in VS Code).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🌐 Deployment
+Optimized for deployment on **Vercel** or any static hosting provider.
+When deploying to Vercel:
+1. Connect this repository.
+2. Vercel will automatically detect the static project.
+3. **Important**: Add your `SUPABASE_URL` and `SUPABASE_ANON_KEY` to the Environment Variables in the Vercel dashboard.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+*Maintained by kimothowangui*
