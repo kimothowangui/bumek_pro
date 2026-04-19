@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Quote - BUMEK</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/globals.css">
+</head>
+<body class="font-display antialiased min-h-screen bg-slate-50 flex flex-col">
+    <div id="navbar-container"></div>
+
+    <main class="flex-1 px-4 md:px-20 py-24 md:py-32 relative" id="quote-main">
+        <div class="mx-auto max-w-[1100px] grid grid-cols-1 lg:grid-cols-2 gap-16 items-start" id="quote-content">
+            <!-- Info Side -->
+            <div class="flex flex-col gap-10 observe-animate">
+                <div>
+                    <span class="bg-accent-red/10 text-accent-red px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-6 inline-block">
+                        Smart Supply Chain
+                    </span>
+                    <h1 class="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[0.9]">
+                        Get a Custom <span class="text-primary italic">Quick</span> Quote
+                    </h1>
+                    <p class="text-xl text-slate-600 font-medium leading-relaxed max-w-lg">
+                        Stop waiting for calls. Our real-time matching system finds you the best price, genuine quality, and fastest delivery in minutes.
+                    </p>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="flex items-center gap-6 group">
+                        <div>
+                            <p class="text-xs font-black uppercase tracking-widest text-slate-400 mb-0.5">Live Support</p>
+                            <p class="text-lg font-black">+254 701 470 493</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-6 group">
+                        <div>
+                            <p class="text-xs font-black uppercase tracking-widest text-slate-400 mb-0.5">Official Inquiry</p>
+                            <p class="text-lg font-black">bumeklimited@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-6 group">
+                        <div>
+                            <p class="text-xs font-black uppercase tracking-widest text-slate-400 mb-0.5">Network HQ</p>
+                            <p class="text-lg font-black">Nairobi, Kenya</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form Side -->
+            <div class="bg-white p-8 md:p-12 rounded-[40px] shadow-2xl border border-slate-100 relative observe-animate" style="transition-delay: 200ms;">
+                <div class="absolute -top-6 -right-6 w-24 h-24 bg-primary rounded-full blur-[60px] opacity-20"></div>
+
+                <form id="quote-form" class="space-y-6 relative z-10">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex flex-col gap-2">
+                            <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Full Name</label>
+                            <input required name="name" class="h-14 bg-slate-50 border-none rounded-2xl px-6 text-sm font-bold focus:ring-2 outline-none ring-primary/20 transition-all placeholder:text-slate-300" placeholder="John Doe" />
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Phone Number</label>
+                            <input required name="phone" class="h-14 bg-slate-50 border-none rounded-2xl px-6 text-sm font-bold focus:ring-2 outline-none ring-primary/20 transition-all placeholder:text-slate-300" placeholder="+254..." />
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                        <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Email Address</label>
+                        <input required type="email" name="email" class="h-14 bg-slate-50 border-none rounded-2xl px-6 text-sm font-bold focus:ring-2 outline-none ring-primary/20 transition-all placeholder:text-slate-300" placeholder="john@example.com" />
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex flex-col gap-2">
+                            <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Required Item</label>
+                            <select id="material-select" name="material_id" class="h-14 bg-slate-50 border-none outline-none rounded-2xl px-6 text-sm font-bold focus:ring-2 ring-primary/20 transition-all font-display w-full">
+                                <option value="">Loading items...</option>
+                            </select>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Quantity</label>
+                            <input required type="number" name="quantity" class="h-14 bg-slate-50 border-none rounded-2xl px-6 outline-none text-sm font-bold focus:ring-2 ring-primary/20 transition-all placeholder:text-slate-300" placeholder="e.g. 100" />
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                        <label class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Project Location</label>
+                        <input required name="location" class="h-14 bg-slate-50 border-none rounded-2xl px-6 text-sm font-bold outline-none focus:ring-2 ring-primary/20 transition-all placeholder:text-slate-300" placeholder="e.g. Westlands, Nairobi" />
+                    </div>
+
+                    <div class="pt-4">
+                        <button id="submit-btn" type="submit" class="w-full bg-accent-red text-white h-16 rounded-2xl font-black uppercase tracking-[0.2em] text-sm shadow-xl shadow-accent-red/30 hover:bg-accent-red-hover hover:scale-[1.02] transition-all active:scale-95 flex items-center justify-center gap-3">
+                            <span id="submit-text">Submit Request</span> 
+                            <span class="material-symbols-outlined" id="submit-icon">arrow_forward</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div id="success-message" class="hidden absolute inset-0 flex items-center justify-center p-4 bg-slate-50 z-50">
+            <div class="max-w-md w-full bg-white p-12 rounded-[40px] shadow-2xl border border-slate-100 text-center animate-in duration-500 fade-in">
+                <div class="w-24 h-24 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-8 animate-bounce">
+                    <span class="material-symbols-outlined text-[48px]">check_circle</span>
+                </div>
+                <h2 class="text-4xl font-black mb-4 tracking-tight">Request Received!</h2>
+                <p class="text-slate-600 font-medium mb-8 leading-relaxed">
+                    We've received your request for a quote. Our team is already matching you with the best merchants in your area.
+                </p>
+                <a href="/products.html" class="block w-full bg-slate-900 text-white py-4 rounded-2xl font-black uppercase tracking-widest text-sm hover:bg-primary transition-all active:scale-95">
+                    Back to Catalog
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="/js/supabase-config.js"></script>
+    <script src="/js/components.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+          const select = document.getElementById("material-select");
+          const urlParams = new URLSearchParams(window.location.search);
+          const productId = urlParams.get('product_id');
+
+          if(window.BumekService) {
+              const materials = await window.BumekService.fetchBumekProducts();
+              select.innerHTML = materials.map(m => `<option value="${m.id}" ${productId === m.id ? 'selected' : ''}>${m.name}</option>`).join("");
+          }
+
+          const form = document.getElementById("quote-form");
+          const btn = document.getElementById("submit-btn");
+          const btnText = document.getElementById("submit-text");
+          const btnIcon = document.getElementById("submit-icon");
+          
+          form.addEventListener("submit", async (e) => {
+              e.preventDefault();
+              btn.disabled = true;
+              btnText.textContent = "Submitting...";
+              btnIcon.textContent = "autorenew";
+              btnIcon.classList.add("animate-spin");
+              
+              const formData = new FormData(form);
+              const data = Object.fromEntries(formData.entries());
+
+              if(window.BumekService) {
+                  const res = await window.BumekService.submitQuoteRequest(data);
+                  if(res.success) {
+                      document.getElementById("quote-content").classList.add("hidden");
+                      document.getElementById("success-message").classList.remove("hidden");
+                  } else {
+                      alert("Something went wrong");
+                  }
+              }
+              
+              btn.disabled = false;
+              btnText.textContent = "Submit Request";
+              btnIcon.textContent = "arrow_forward";
+              btnIcon.classList.remove("animate-spin");
+          });
+
+          // Animation observer
+          const observer = new IntersectionObserver((entries) => {
+              entries.forEach(e => {
+                  if(e.isIntersecting) {
+                      e.target.classList.add("in-view");
+                  }
+              });
+          }, { threshold: 0.1 });
+          document.querySelectorAll('.observe-animate').forEach(el => observer.observe(el));
+      });
+    </script>
+</body>
+</html>

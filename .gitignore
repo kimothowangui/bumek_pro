@@ -1,0 +1,12 @@
+# ignoring sensitive environment variables
+.env
+.env.local
+.env.*
+
+# operating system files
+.DS_Store
+Thumbs.db
+
+# Any temporary files
+*.log
+/tmp/

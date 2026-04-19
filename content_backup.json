@@ -1,0 +1,53 @@
+{
+  "siteMetadata": {
+    "title": "BUMEK - Powering Construction Through Smart Supply Chains",
+    "description": "Kenya's leading tech-enabled construction material supply network connecting clients, merchants, and drivers in real time.",
+    "phone": ["0701470493", "0728725055"],
+    "email": "bumeklimited@gmail.com",
+    "location": "9th Floor, Lemme Towers, Nairobi, Kenya"
+  },
+  "images": {
+    "logo": "/logo.png",
+    "heroBg": "https://lh3.googleusercontent.com/aida-public/AB6AXuD1xfvjFsKvFxgEnRQrK54Es1VNBnyTNkf0R5A-7yD6p6OY1LhnUutK5tyhARvjiTCadqXCyI13BoyYFL_ETGGHGVbJoIP7erQrcFVnhV5mECc8hAReSHj9v1_cN0aqgBm5AMeEFd21YzlVHIWZqoeg8MgnxsUCISDOJZvRNSFGPJ9HgCZKlBgulEclydHzYBhOyMYj_yOCntaoEZeHSPKR7lTYQJrTr-EzbqieYeB1L2fh2T_E5coYNc4dP_u9HU-kCdcuA9R0_Q",
+    "aboutHero": "https://lh3.googleusercontent.com/aida-public/AB6AXuAIPT0u2heNYDP9vpru-8V4b0qYMEWPIjBh1qYZkRe9yx3xQGFd6iefTBiuwfPGLcF-2_rKMyG7tD8eDJaEQqrjvBSkNwdydnH3VqrAGnjpV6jAVCq9zhPab-wMCJGa88YCSogBOW1TO-fQsY2IzRSfYghtkKkUSkfLynwotiHjfuu_8NxdiNpPJWYb8xuF4YzlZ0DoFbvCXrwvPbVWq6sUFjd182M-JHwxZJ-pwU3OsfGxH2y-UfSbHhfwHksDuhFh3P2ykEZ78g",
+    "truck": "https://lh3.googleusercontent.com/aida-public/AB6AXuCaOjqf5GpABNhZlNEYvTNHAQ0ibST0M2ysYscBqJyFeRYjeXHmgMbzQj6HEADDIy7If3CwIwVdLzF8sFUqLL-2J2YULiRefQBpTnF0RQOnZN3DCCQGLHE5lI3YJHy_EOaj55fT2IkVciOEla58_yrjBFLxGJxEJymHGPbamB0lBIMJdFdbQNGxsZW52cKOVjmtz_opRkUbVqcwVX_O-P88iLU85kJH953cw68-Y4ziZU7shwZY-nFbcKE63Lcv81sE2CQxuBt-Hw",
+    "contactMap": "https://lh3.googleusercontent.com/aida-public/AB6AXuA8NDG5UpTv_exx2wxnwQ9nTy4oGpWix-XlzObW6rRslmxCZ0wUoxiuybSLbSK0hqKWM79JwnShs1j7-L95AhXxpZlvwYzLkAvI97XoyEKthMKyp1EJDkqU79sRNN-d0RkIUBVZqnSYxKUejYBgYnZIywtwfDF-B7dUOtODx0j4BPsG-DDZjiutf7DYI6QgtGejPGiMXwGUqtb3SBDZAbSmZh1o0mWnAdqwjxQ3B-JtD27_mqVAU3zjs2PZozmJAP303BetHfn1FQ",
+    "team": [
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuBoC6IyiONyAc7j4pUOtDcQwFfhB2BwbURKulNKagF6KA3r90uaQP3hU0UQo40k_V3JCQ7c_ncDw5LK7vpV68NluoTrZsCWEXvbfEsPfDMz8SH-nZiw6vurSFtRDUNzwAHDYZvxTSFnBAi-iiXiNkBm81xb6yaCgoCo21i_V0qTkEUDUgtiu0A6pVJDady-MmZHcKwCcwetb2aMm2sMSTgPSknwJYf6_LPH59hTOkP_3m4DFgbp43z9zHdu6hlNpkWHkUOl9jUqEw",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuCVQuDTZ4tdkNg5ivckVcfTmAyIc8ZPXQIirC_GnMgY7JD2FBfJoTVLxRsTR7kTHf08fkhidUwW-JjI-HAqu8TMJSeLeB4h7GuII3WWa4NJA3spksAVelVj_r2YLYZmPui-55vyx8EGda2culpVBgoZ9-0C6LEwXreGjXj39TcFDOx8sJT9e9v-aK5V9sz8PgaYG4KUa7TT8LGKYG2uqKQdPLeV-YmPVaB1dBWN1-roaqap3-DBkAGWlhfk8sNyElahLGRPLWdSLg",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDGxAnp2p-xoLZMauChXAngjQGi_UWniToPf40Vc8vojw6u8ZCFz-wznFQrlbsM0SiFGAsrH5Rdoh5v3PgMT92jrMT6ev00CiJm3VL3F646v4WGyYa12AwcD4eBQ28eDxi6FBY34izR_A-3xKoimYO_8gYnhpLzZQn-cfe_E_iyNzyNk-3P8zoL-ROQ305GjJmDDBg0sDtllewCobk7gidoS4ZW7UIF_1kdNqo3jjbgJJztKHZXn8AUtIIOsFh3noHIynzKSEboAQ",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuBbLHeKYTvCwFaAJLNOm2BtrJ2vRzzP_d7M4M0DomfC7SChshawKtLQ-nkAs9O_XPGWCeaUo_ophWXTc3KWkojetmzIlA_mYDRlLeLEuPhKGoZ8CqJapjh05RaKvwbr3yF6Kurm6Df5d9-W3l6mXEDGYmRr2ViMe8LSDiPvc1wqvQ4ala7bn4qXz1VOx8dexIlkjjcwDVwiqTFaDhLfeQ6T7bUvH1QRrpAG2S8SGU7iZ5moMyt12mJaLg_djLCjsG4z0fgH1tQyYQ"
+    ],
+    "fallbackMaterials": [
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuBiO2_hDlbhYzUZYpdIRNrZoRY94IViKJtonGKLtwglNso3a0nep003CMA2NrM9UYlWQokBUIzE8J7MfakkYyd0n46MObfgVP7lyJIl3CARvDfda2U4TkF4WEH4Uu9BTO7EyHjtLe2UqxiohpPWMoTWjIa0NIIiC9fa1279LZdVHQkufapd44pG5pmllIaP3rRJ6ViRl9i5e4D5lELDyiwVOVvpW1GdXaMrqAZHZ1S4PaSuZXl3GGe1WgtPu9LRE690U_cT2aU2NQ",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuCDN5UUsqTTtodIM7jNXtlapnpW9LCSqtmTg-owlhiVRhj3n0b3-BE2jXcSdE_7lfYPGSp3Y2OlBsmkoGrkRhNzYjOw3bQisVYejNBKUUmhPYWvIQ7l95bSdQ61zXTHvfPK5N4V9Ode_t_t3ZMEjFwtbOHZNKmHGN1DKXUV7m_NhrxbG1lHSlsfHqnnzCeBrLM8-1Hp2aTB6s3cfIZHLZuVZPahZm3RJJCGLk57z5_Y4gNCJ-WAJDG9FjxeaGN4tHE0Fx9HtJWnSw",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDxX7JVuK4Dp_k-R4hN3QxZspLfRg30SzxBB8I1VhAOaPLZBX_JyFi1krTucjRykA_FQhkn0JFGyzqoe6TpOM_rED36elX98NamU9ktx-LnetRUgcJtKl7pRcWLts69cr4HKxlkzyv6-1sPpLLm0XfFaxKlY053ztHJwMzxDNhK4baa_cIz6eW4BqaQlK8V_cYDeLRq3yMRPbZVwdMyfT4_66cOBQBiUD7orsnocTebOa6GbN8L9Sq_zAt278QAmeuDK8hgsJG5Mg",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuBP7sr_FwnEX78lwU5TOEcNApAzMnW73enZbADDCdPhi8RwXtH1o7wY3Ho52thZa24wdN4YlkOlob-wmc4Pol21dPO2G5v-QkjxrF2uophRKNYtmCQlyb8EprSSgycp9I6JdYWrj-HDIjfUcOK-Yq_TdNmdjBEv0PWJp8-kZk4iEdLrS4foPhnWkB2I_QbL9eJtOUN-ntTm_6jTwh3TeZwwGZPRxra8V3dN1YwY2aHybaudI-qgjiF0Q5kmDW2teYmjSyQJBEeNxA"
+    ]
+  },
+  "pages": {
+    "home": {
+      "heroTitle": "Powering Construction Through Smart Supply Chains",
+      "heroDesc": "Kenya's leading construction supply partner. We deliver high-quality materials and innovative logistics solutions to build the future of East Africa with unmatched urgency.",
+      "legacyTitle": "Building Kenya's Infrastructure with Precision and Integrity",
+      "stats": [
+        {"label": "Tons Delivered", "value": "500K+"},
+        {"label": "Projects Completed", "value": "1,200+"},
+        {"label": "Delivery Reach", "value": "47 Counties"},
+        {"label": "Years Experience", "value": "15+"}
+      ]
+    },
+    "about": {
+      "title": "Who We Are",
+      "vision": "To be Kenya's most trusted tech-enabled construction material supply network...",
+      "mission": "To streamline construction supply while maintaining quality, transparency, and efficiency...",
+      "milestones": ["The Beginning (2010)", "Expansion (2015)", "Digitization (2019)", "Market Leader (Today)"]
+    },
+    "quote": {
+      "title": "Get a Custom Quick Quote"
+    },
+    "admin": {
+      "title": "Good morning, Admin!"
+    }
+  }
+}

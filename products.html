@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Catalog - BUMEK</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/globals.css">
+</head>
+<body class="font-display antialiased min-h-screen bg-slate-50 flex flex-col">
+    <div id="navbar-container"></div>
+
+    <main class="flex-1">
+        <!-- Page Header -->
+        <div class="bg-primary pt-32 pb-20 px-4 md:px-20 text-white relative overflow-hidden">
+            <div class="w-96 h-96 bg-accent-red/20 blur-[120px] absolute -top-48 -right-48 rounded-full"></div>
+            <div class="mx-auto max-w-[1280px] relative z-10 observe-animate">
+                <h1 class="text-5xl md:text-7xl font-black mb-6 tracking-tight">Supplies Catalog</h1>
+                <p class="text-xl text-blue-100 max-w-2xl font-medium leading-relaxed">
+                    Kenya's most reliable network for genuine construction materials. Buy directly from certified manufacturers and merchants.
+                </p>
+            </div>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="sticky top-20 z-40 bg-white border-b border-slate-200 px-4 md:px-20 py-4 shadow-sm">
+            <div class="mx-auto max-w-[1280px] flex flex-col md:flex-row justify-between items-center gap-6">
+                <div id="category-filters" class="flex gap-2 overflow-x-auto w-full md:w-auto no-scrollbar pb-2 md:pb-0">
+                    <!-- Filters populated by JS -->
+                </div>
+
+                <div class="relative w-full md:w-80 group">
+                    <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xl transition-colors group-focus-within:text-primary">search</span>
+                    <input
+                        id="search-input"
+                        type="text"
+                        placeholder="Search materials..."
+                        class="w-full bg-slate-100 border-none rounded-xl pl-12 pr-4 py-3 text-sm font-bold outline-none focus:ring-2 ring-primary/20 transition-all"
+                    />
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="px-4 md:px-20 py-16">
+            <div class="mx-auto max-w-[1280px]" id="products-container">
+                <div class="p-20 flex flex-col items-center gap-4 text-slate-400">
+                    <span class="material-symbols-outlined animate-spin text-4xl">autorenew</span>
+                    <p class="font-bold uppercase tracking-widest text-xs">Loading Catalog...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="/js/supabase-config.js"></script>
+    <script src="/js/components.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+          const urlParams = new URLSearchParams(window.location.search);
+          const activeCategory = urlParams.get('category') || 'All';
+          const categories = ["All", "Cement", "Steel", "Timber", "Aggregates"];
+          
+          const filterContainer = document.getElementById("category-filters");
+          const productsContainer = document.getElementById("products-container");
+          const searchInput = document.getElementById("search-input");
+          
+          let allMaterials = [];
+
+          const renderFilters = (active) => {
+              filterContainer.innerHTML = categories.map(cat => `
+                 <button class="category-btn px-6 py-2 rounded-full text-sm font-bold transition-all whitespace-nowrap ${active === cat ? 'bg-accent-red text-white shadow-lg shadow-accent-red/20' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}" data-category="${cat}">
+                     ${cat}
+                 </button>
+              `).join('');
+
+              document.querySelectorAll('.category-btn').forEach(btn => {
+                  btn.addEventListener('click', (e) => {
+                      const cat = e.target.getAttribute('data-category');
+                      const newUrl = new URL(window.location);
+                      newUrl.searchParams.set('category', cat);
+                      window.history.pushState({}, '', newUrl);
+                      fetchData(cat);
+                  });
+              });
+          };
+
+          const renderProducts = (materials) => {
+              if(!materials || materials.length === 0) {
+                  productsContainer.innerHTML = `
+                      <div class="text-center py-32 bg-white rounded-3xl border border-dashed border-slate-200">
+                          <span class="material-symbols-outlined text-[64px] text-slate-300 mx-auto mb-6">database</span>
+                          <h3 class="text-2xl font-black mb-2">No Items Found</h3>
+                          <p class="text-slate-500 font-bold uppercase tracking-widest text-sm">Try adjusting your filters or search query</p>
+                      </div>
+                  `;
+                  return;
+              }
+
+              productsContainer.innerHTML = `
+                  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                      ${materials.map(item => `
+                          <div class="group bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col observe-animate in-view">
+                              <div class="relative h-56 bg-slate-100 overflow-hidden">
+                                  ${item.image_url ? `<img src="${item.image_url}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />` : `<div class="w-full h-full flex flex-col items-center justify-center gap-2 text-slate-300"><span class="material-symbols-outlined text-[48px]">database</span><span class="text-[10px] font-black uppercase tracking-widest">Image Coming Soon</span></div>`}
+                                  <div class="absolute top-4 left-4 flex flex-col gap-2">
+                                      ${item.tag ? `<span class="bg-primary px-3 py-1 rounded-full text-[10px] font-black text-white uppercase tracking-wider shadow-lg">${item.tag}</span>` : ''}
+                                      <span class="bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-black text-slate-900 uppercase tracking-wider border border-slate-200">${item.category}</span>
+                                  </div>
+                              </div>
+                              <div class="p-6 flex flex-col flex-1">
+                                  <h3 class="text-xl font-black line-clamp-1 mb-4 group-hover:text-primary transition-colors">${item.name}</h3>
+                                  <p class="text-slate-600 font-medium mb-6 line-clamp-2">${item.description}</p>
+                                  <div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between">
+                                      <div>
+                                          <p class="text-xs font-black text-slate-400 uppercase tracking-widest mb-1 leading-none">Starting from</p>
+                                          <div class="flex items-baseline gap-1">
+                                              <span class="text-2xl font-black leading-none">KSh ${(item.price_per_unit).toLocaleString()}</span>
+                                              <span class="text-xs text-slate-500 font-bold capitalize">/${item.unit}</span>
+                                          </div>
+                                      </div>
+                                      <a href="/quote.html?product_id=${item.id}" class="w-12 h-12 rounded-xl bg-slate-900 text-white flex items-center justify-center group-hover:bg-accent-red transition-all shadow-lg active:scale-95">
+                                          <span class="material-symbols-outlined">arrow_forward</span>
+                                      </a>
+                                  </div>
+                              </div>
+                          </div>
+                      `).join('')}
+                  </div>
+              `;
+          };
+
+          const fetchData = async (category) => {
+              renderFilters(category);
+              if(window.BumekService) {
+                 allMaterials = await window.BumekService.fetchBumekProducts(category);
+                 renderProducts(allMaterials);
+                 filterBySearch();
+              }
+          };
+
+          const filterBySearch = () => {
+              const query = searchInput.value.toLowerCase();
+              const filtered = allMaterials.filter(m => m.name.toLowerCase().includes(query) || m.category.toLowerCase().includes(query));
+              renderProducts(filtered);
+          };
+
+          searchInput.addEventListener('input', filterBySearch);
+
+          // Initial Load
+          fetchData(activeCategory);
+      });
+    </script>
+</body>
+</html>
