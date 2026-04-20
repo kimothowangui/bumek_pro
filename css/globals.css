@@ -1,5 +1,3 @@
-/* css/globals.css */
-@import "https://unpkg.com/@tailwindcss/browser@4";
 
 @theme {
   --color-primary: #137fec;
